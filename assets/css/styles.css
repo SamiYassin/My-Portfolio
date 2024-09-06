@@ -202,7 +202,7 @@ body{
 }
 
 /* About Skills Section */
-.about-skills ,.recent-works {
+.about-skills ,.recent-works , .contact-me {
   padding: 80px 20px; 
 }
 
@@ -212,11 +212,12 @@ body{
   text-align: left; 
 }
 
-.about-me h2 , .professional-skillset h2 , .recent-works h2{
+.about-me h2 , .professional-skillset h2 , .recent-works h2 , .contact-me h2{
   font-size: 2.7rem; 
   font-weight: 700; 
   margin-bottom: 40px; 
   text-align: center;
+  text-transform: capitalize;
 }
 
 .about-me p {
@@ -281,7 +282,7 @@ body{
 
 .card {
   background-color: #ffffff; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 5px 3px rgba(0, 123, 255, 0.1);
   border-radius: 12px; 
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
@@ -289,7 +290,7 @@ body{
 
 .card:hover {
   transform: translateY(-10px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 10px 6px rgba(0, 123, 255, 0.2); 
 }
 
 .card img {
@@ -323,7 +324,7 @@ body{
 
 .projects-links a {
   text-decoration: none;
-  color: #007bff;
+  color: rgb(0, 123, 255);
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -335,3 +336,73 @@ body{
 .projects-links i {
   margin-right: 8px;
 }
+
+/* contact */
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.infos {
+  text-align: left;
+}
+
+.content-container .infos h3{
+  font-size: 3.5rem;
+  letter-spacing: 2.5px;
+  color: var(--link-color);
+  margin-bottom: 20px;
+}
+
+.content-container .infos .text-info {
+  padding-bottom: 20px;
+}
+
+.content-container .infos .text-info h4 {
+  color: #e5c700;
+  font-size: 1.4rem;
+}
+
+.content-container .infos .text-info p {
+  font-size: 1rem;
+  color: #666; 
+}
+
+.content-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+ min-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+form button {
+  background-color: #e5c700;
+  color: #333; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
