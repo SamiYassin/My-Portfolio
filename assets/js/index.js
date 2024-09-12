@@ -6,35 +6,44 @@ document.getElementById("menu-toggle").addEventListener("click", function() {
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Check if user has a saved theme preference in localStorage
+
 const savedTheme = localStorage.getItem('theme');
 
-// If a theme is saved, apply it
+
 if (savedTheme) {
   body.classList.add(savedTheme);
-  themeToggleBtn.textContent = savedTheme === 'dark-mode' ? '🌞' : '🌙'; // Change icon
+  themeToggleBtn.textContent = savedTheme === 'dark-mode' ? '🌞' : '🌙'; 
 }
 
-// Function to toggle between light and dark mode
 themeToggleBtn.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   
   if (body.classList.contains('dark-mode')) {
-    themeToggleBtn.textContent = '🌞'; // Change to sun icon
-    localStorage.setItem('theme', 'dark-mode'); // Save preference to localStorage
+    themeToggleBtn.textContent = '🌞'; 
+    localStorage.setItem('theme', 'dark-mode'); 
   } else {
-    themeToggleBtn.textContent = '🌙'; // Change to moon icon
-    localStorage.setItem('theme', 'light-mode'); // Save preference to localStorage
+    themeToggleBtn.textContent = '🌙';
+    localStorage.setItem('theme', 'light-mode'); 
   }
 });
 
+document.querySelectorAll('.links a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelector('.links').classList.remove('active'); // Close menu
+  });
+});
 
-let typed = new Typed("#typed" , {
-    strings: ['Front-end Developer' , 'React Developer'],
+try {
+  let typed = new Typed("#typed", {
+    strings: ['Front-end Developer', 'React Developer'],
     typeSpeed: 35,
     startDelay: 500,
-    backlDelay: 1000,
+    backDelay: 1000,
     backSpeed: 35,
     loop: true,
     showCursor: true
-})
+  });
+} catch (error) {
+  console.error("Typed.js failed to load:", error);
+}
+

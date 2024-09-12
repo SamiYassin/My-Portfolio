@@ -25,6 +25,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
 body{
     margin: 0;
     display: flex;
@@ -40,6 +42,15 @@ body{
     margin: 0 auto; 
     position: relative;
   }
+  section:last-child {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
   header { 
     position: fixed;
     top: 0; 
@@ -106,6 +117,7 @@ body{
     border: none;
     font-size: 24px;
     cursor: pointer;
+    color: var(--text-color);
   }
 
   /* Media queries for responsiveness */
@@ -287,6 +299,15 @@ body{
 
 }
 
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
 /* About Skills Section */
 .about-skills ,.recent-works , .contact-me {
   padding: 80px 20px; 
@@ -498,6 +519,11 @@ form button {
   transition: background-color 0.3s ease;
 }
 
+form input:focus, form textarea:focus {
+  border-color: var(--link-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
 /* footer */
 
 footer {
@@ -513,12 +539,13 @@ footer {
   margin-bottom: 20px;
 }
 
-
-
-
 @media (max-width: 768px) {
   .content-container {
  flex-direction: column;
+  }
+
+  footer {
+    padding: 20px 10px;
   }
 }
 
