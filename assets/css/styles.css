@@ -307,6 +307,12 @@ body{
   .hero-content p {
     font-size: 1rem;
   }
+  .hero-img {
+    display: none;
+ }
+  .icons {
+    display: flex;
+  }
 }
 /* About Skills Section */
 .about-skills ,.recent-works , .contact-me {
